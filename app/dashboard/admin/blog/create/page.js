@@ -86,7 +86,7 @@ export default function AdminBlogCreate() {
 
   const deleteImage = (public_id) => {
     setLoading(true);
-    fetch(`${process.env.API}/admin/upload/image`, {
+    fetch(`${process.env.API}/api/admin/upload/image`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export default function AdminBlogCreate() {
 
   const createBlog = async () => {
     try {
-      const response = await fetch(`${process.env.API}/admin/blog`, {
+      const response = await fetch(`${process.env.API}/api/admin/blog`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

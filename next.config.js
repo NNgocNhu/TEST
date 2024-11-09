@@ -10,7 +10,7 @@ const nextConfig = {
   },
   env: {
     DB_URI: process.env.DB_URI,
-    API: process.env.NEXT_PUBLIC_API,
+    API: process.env.API,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,

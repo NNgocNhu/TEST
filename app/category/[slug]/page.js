@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
 
 async function getCategory(slug) {
   console.log('Fetching category with slug:', slug);
-  const apiUrl = `${process.env.API}/category/${slug}`;
+  const apiUrl = `${process.env.API}/api/category/${slug}`;
   console.log("Fetching category from:", apiUrl); // Log apiUrl
 
   try {
