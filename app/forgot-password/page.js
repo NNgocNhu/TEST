@@ -17,7 +17,7 @@ export default function ForgotPassword() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch(`${process.env.API}/api/password/forgot`, {
+      const response = await fetch(`${process.env.API}/password/forgot`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function ForgotPassword() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch(`${process.env.API}/api/password/reset`, {
+      const response = await fetch(`${process.env.API}/password/reset`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

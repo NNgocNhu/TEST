@@ -12,7 +12,7 @@ export default function AdminDashboard() {
 
   const fetchChartData = async () => {
     try {
-      const response = await fetch(`${process.env.API}/api/admin/chart`);
+      const response = await fetch(`${process.env.API}/admin/chart`);
       const data = await response.json();
 
       setChartData(data.data);

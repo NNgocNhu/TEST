@@ -8,7 +8,7 @@ export default function UserDashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${process.env.API}/api/user/product/liked`);
+        const response = await fetch(`${process.env.API}/user/product/liked`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

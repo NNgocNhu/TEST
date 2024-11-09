@@ -8,7 +8,7 @@ export default function UserDashboard() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch(`${process.env.API}/api/user/blog/liked`);
+        const response = await fetch(`${process.env.API}/user/blog/liked`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

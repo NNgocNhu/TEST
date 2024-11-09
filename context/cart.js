@@ -81,7 +81,7 @@ export const CartProvider = ({ children }) => {
   // Áp dụng mã giảm giá
   const handleCoupon = async (coupon) => {
     try {
-      const response = await fetch(`${process.env.API}/api/stripe/coupon`, {
+      const response = await fetch(`${process.env.API}/stripe/coupon`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

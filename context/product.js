@@ -79,7 +79,7 @@ export const ProductProvider = ({ children }) => {
             100,
             0,
             (uri) => {
-              fetch(`${process.env.API}/api/admin/upload/image`, {
+              fetch(`${process.env.API}/admin/upload/image`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -120,7 +120,7 @@ export const ProductProvider = ({ children }) => {
 
   const deleteImage = (public_id) => {
     setUploading(true);
-    fetch(`${process.env.API}/api/admin/upload/image`, {
+    fetch(`${process.env.API}/admin/upload/image`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -153,7 +153,7 @@ export const ProductProvider = ({ children }) => {
 
   const createProduct = async () => {
     try {
-      const response = await fetch(`${process.env.API}/api/admin/product`, {
+      const response = await fetch(`${process.env.API}/admin/product`, {
         method: "POST",
         body: JSON.stringify(product),
       });
@@ -174,7 +174,7 @@ export const ProductProvider = ({ children }) => {
 
   const fetchProducts = async (page = 1) => {
     try {
-      const response = await fetch(`${process.env.API}/api/product?page=${page}`, {
+      const response = await fetch(`${process.env.API}/product?page=${page}`, {
         method: "GET",
       });
 
@@ -195,7 +195,7 @@ export const ProductProvider = ({ children }) => {
   const updateProduct = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/api/admin/product/${updatingProduct?._id}`,
+        `${process.env.API}/admin/product/${updatingProduct?._id}`,
         {
           method: "PUT",
           body: JSON.stringify(updatingProduct),
@@ -218,7 +218,7 @@ export const ProductProvider = ({ children }) => {
   const deleteProduct = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/api/admin/product/${updatingProduct?._id}`,
+        `${process.env.API}/admin/product/${updatingProduct?._id}`,
         {
           method: "DELETE",
         }
@@ -239,7 +239,7 @@ export const ProductProvider = ({ children }) => {
 
   const fetchBrands = async () => {
     try {
-      const response = await fetch(`${process.env.API}/api/product/brands`, {
+      const response = await fetch(`${process.env.API}/product/brands`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -260,7 +260,7 @@ export const ProductProvider = ({ children }) => {
   const fetchColorOptions = async (productId) => {
     try {
       const response = await fetch(
-        `${process.env.API}/api/product/${productId}/colors`,
+        `${process.env.API}/product/${productId}/colors`,
         {
           method: "GET",
         }
@@ -285,7 +285,7 @@ export const ProductProvider = ({ children }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `${process.env.API}/api/search/products?productSearchQuery=${productSearchQuery}`,
+        `${process.env.API}/search/products?productSearchQuery=${productSearchQuery}`,
         {
           method: "GET",
         }

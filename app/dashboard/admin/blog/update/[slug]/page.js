@@ -23,7 +23,7 @@ export default function AdminBlogUpdate({ params }) {
 
   async function getBlog() {
     try {
-      const response = await fetch(`${process.env.API}/api/blog/${params.slug}`);
+      const response = await fetch(`${process.env.API}/blog/${params.slug}`);
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -87,7 +87,7 @@ export default function AdminBlogUpdate({ params }) {
         100,
         0,
         (uri) => {
-          fetch(`${process.env.API}/api/admin/upload/image`, {
+          fetch(`${process.env.API}/admin/upload/image`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -113,7 +113,7 @@ export default function AdminBlogUpdate({ params }) {
 
   const deleteImage = (public_id) => {
     setLoading(true);
-    fetch(`${process.env.API}/api/admin/upload/image`, {
+    fetch(`${process.env.API}/admin/upload/image`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export default function AdminBlogUpdate({ params }) {
 
   const updateBlog = async () => {
     try {
-      const response = await fetch(`${process.env.API}/api/admin/blog/${id}`, {
+      const response = await fetch(`${process.env.API}/admin/blog/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
