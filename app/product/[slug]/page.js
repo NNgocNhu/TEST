@@ -170,7 +170,7 @@ export default function ProductViewPage({ params }) {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          `${process.env.API}/product/${params?.slug}`,
+          `${process.env.API}/api/product/${params?.slug}`,
           {
             method: "GET",
             next: { revalidate: 1 },

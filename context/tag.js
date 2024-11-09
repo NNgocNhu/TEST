@@ -9,7 +9,7 @@ export const TagProvider = ({ children }) => {
   const [updatingTag, setUpdatingTag] = useState(null);
   const createTag = async () => {
     try {
-      const response = await fetch(`${process.env.API}/admin/tag`, {
+      const response = await fetch(`${process.env.API}/api/admin/tag`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, parent: parentCategory }),
@@ -31,11 +31,11 @@ export const TagProvider = ({ children }) => {
   };
   const fetchTags = async () => {
     try {
-      const response = await fetch(`${process.env.API}/tags`, {
+      const response = await fetch(`${process.env.API}/api/tags`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
-      console.log("API URL:", `${process.env.API}/tags`);
+      console.log("API URL:", `${process.env.API}/api/tags`);
       console.log("Response Status:", response.status); // Log status code
 
       if (!response.ok) {
@@ -56,7 +56,7 @@ export const TagProvider = ({ children }) => {
   const updateTag = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/tag/${updatingTag._id}`,
+        `${process.env.API}/api/admin/tag/${updatingTag._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -82,7 +82,7 @@ export const TagProvider = ({ children }) => {
   const deleteTag = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/tag/${updatingTag._id}`,
+        `${process.env.API}/api/admin/tag/${updatingTag._id}`,
         { method: "DELETE" }
       );
       if (!response.ok) {

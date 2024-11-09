@@ -225,7 +225,7 @@ export default function ProductRating({ product, leaveReview = true }) {
       return;
     }
     try {
-      const response = await fetch(`${process.env.API}/user/product/rating`, {
+      const response = await fetch(`${process.env.API}/api/user/product/rating`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

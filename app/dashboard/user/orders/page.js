@@ -15,7 +15,7 @@ export default function UserOrders() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch(`${process.env.API}/user/orders`, {
+      const response = await fetch(`${process.env.API}/api/user/orders`, {
         method: "GET",
       });
       const data = await response.json();

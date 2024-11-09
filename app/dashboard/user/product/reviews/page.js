@@ -26,7 +26,7 @@ export default function UserProductReviewsPage() {
   const fetchReviews = async (page) => {
     try {
       const response = await fetch(
-        `${process.env.API}/user/product/reviews?page=${page}`,
+        `${process.env.API}/api/user/product/reviews?page=${page}`,
         {
           method: "GET",
         }

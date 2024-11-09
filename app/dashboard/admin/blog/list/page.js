@@ -8,7 +8,7 @@ async function getBlogs(searchParams) {
 
   const searchQuery = queryString.stringify(urlParams);
 
-  const apiUrl = `${process.env.API}/blog?${searchQuery}`;
+  const apiUrl = `${process.env.API}/api/blog?${searchQuery}`;
 
   const options = {
     method: "GET",

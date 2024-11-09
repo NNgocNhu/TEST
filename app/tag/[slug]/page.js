@@ -12,7 +12,7 @@ export async function generateMetadata({ slug }) {
 }
 async function getTag(slug) {
   try {
-    const response = await fetch(`${process.env.API}/tag/${slug}`, {
+    const response = await fetch(`${process.env.API}/api/tag/${slug}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

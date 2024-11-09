@@ -14,7 +14,7 @@ async function getProducts(searchParams) {
   }).toString();
 
   try {
-    const response = await fetch(`${process.env.API}/product?${searchQuery}`, {
+    const response = await fetch(`${process.env.API}/api/product?${searchQuery}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

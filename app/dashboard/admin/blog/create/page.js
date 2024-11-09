@@ -60,7 +60,7 @@ export default function AdminBlogCreate() {
         100,
         0,
         (uri) => {
-          fetch(`${process.env.API}/admin/upload/image`, {
+          fetch(`${process.env.API}/api/admin/upload/image`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

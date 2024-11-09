@@ -10,7 +10,7 @@ export const CategoryProvider = ({ children }) => {
   const [updatingCategory, setUpdatingCategory] = useState(null);
   const createCategory = async () => {
     try {
-      const response = await fetch(`${process.env.API}/admin/category`, {
+      const response = await fetch(`${process.env.API}/api/admin/category`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const CategoryProvider = ({ children }) => {
   };
   const fetchCategories = async () => {
     try {
-      const response = await fetch(`${process.env.API}/categories`, {
+      const response = await fetch(`${process.env.API}/api/categories`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export const CategoryProvider = ({ children }) => {
   const updateCategory = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/category/${updatingCategory._id}`,
+        `${process.env.API}/api/admin/category/${updatingCategory._id}`,
         {
           method: "PUT",
           headers: {
@@ -85,7 +85,7 @@ export const CategoryProvider = ({ children }) => {
   const deleteCategory = async () => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/category/${updatingCategory._id}`,
+        `${process.env.API}/api/admin/category/${updatingCategory._id}`,
         {
           method: "DELETE",
         }

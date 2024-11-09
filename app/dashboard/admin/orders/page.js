@@ -18,7 +18,7 @@ export default function AdminOrders() {
   }, [page]);
   const fetchOrders = async (page) => {
     try {
-      const response = await fetch(`${process.env.API}/admin/orders?page=${page}`, {
+      const response = await fetch(`${process.env.API}/api/admin/orders?page=${page}`, {
         method: "GET",
       });
       const data = await response.json();
@@ -34,7 +34,7 @@ export default function AdminOrders() {
   const handleStatusChange = async (newStatus, orderId) => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/orders/${orderId}`,
+        `${process.env.API}/api/admin/orders/${orderId}`,
         {
           method: "PUT",
           headers: {

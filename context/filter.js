@@ -24,7 +24,7 @@ export const FilterProvider = ({ children }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `${process.env.API}/product/filter?filterQuery=${filterQuery}`
+        `${process.env.API}/api/product/filter?filterQuery=${filterQuery}`
       );
 
       if (!response.ok) {

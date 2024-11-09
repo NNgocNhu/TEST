@@ -27,7 +27,7 @@ export default function AdminProductReviewsPage() {
   const fetchReviews = async (page) => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/product/reviews?page=${page}`,
+        `${process.env.API}/api/admin/product/reviews?page=${page}`,
         {
           method: "GET",
         }
@@ -49,7 +49,7 @@ export default function AdminProductReviewsPage() {
   const handleDelete = async (ratingId) => {
     try {
       const response = await fetch(
-        `${process.env.API}/admin/product/reviews/remove`,
+        `${process.env.API}/api/admin/product/reviews/remove`,
         {
           method: "POST",
           headers: {

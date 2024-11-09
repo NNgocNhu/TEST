@@ -12,7 +12,7 @@ export default function UserDashboard() {
 
   const fetchChartData = async () => {
     try {
-      const response = await fetch(`${process.env.API}/user/chart`);
+      const response = await fetch(`${process.env.API}/api/user/chart`);
       const data = await response.json();
 
       setChartData(data.data);

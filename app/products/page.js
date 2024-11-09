@@ -22,7 +22,7 @@ async function getProducts(searchParams) {
   if (searchParams?.brand) query.set("brand", searchParams.brand);
 
   try {
-    const response = await fetch(`${process.env.API}/product?${query.toString()}`, {
+    const response = await fetch(`${process.env.API}/api/product?${query.toString()}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

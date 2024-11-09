@@ -40,7 +40,7 @@ export default function BlogLike({ blog }) {
         };
 
         const response = await fetch(
-          `${process.env.API}/user/blog/like`,
+          `${process.env.API}/api/user/blog/like`,
           options
         );
         if (!response.ok) {
@@ -74,7 +74,7 @@ export default function BlogLike({ blog }) {
       };
 
       const response = await fetch(
-        `${process.env.API}/user/blog/unlike`,
+        `${process.env.API}/api/user/blog/unlike`,
         options
       );
       if (!response.ok) {
